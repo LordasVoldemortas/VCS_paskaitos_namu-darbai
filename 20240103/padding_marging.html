@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding Margin</title>
+    <style>
+        body {
+            /* standartinio narsykles stiliaus pakeitimas */
+            margin: 0;
+        }
+        .box {
+            color: white;
+            background-color: purple;
+            /* atitraukimas is vidaus ,visos krastines vienodos*/
+            /* padding: 50px; */
+            /* tik is virsaus */
+            padding-top: 80px;
+            /* tik is desines */
+            padding-right: 50px;
+            /* tik is apacios */
+            padding-bottom: 100px;
+            /* tik is kaires */
+            padding-left: 25px;
+                   
+            /* visu krypciu sujungimas i viena eiltute */
+            /* reiksmes isdeliojamos pagal laikrodzio rodykle */
+            padding: 80px 50px 100px 25px;
+
+            /* jeigu norime aprasyti padding'a: 80px is virsaus, 50px is kaires ir desines, 45px is apacios */
+            padding: 80px 50px 45px;
+
+            /* jeigu is virsaus ir apacios turime vienoda reiksme, ir vienodos is kaires ir desines vienodai */
+            padding: 80px 50px;
+        }
+        .box2 {
+            background-color: brown;
+            color:white;
+            /* atitraukimas is isores */
+            /* kryptims galioja same as padding */
+            margin: 50px;
+            border: 10px solid  green;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, quas.</div>
+    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi excepturi labore voluptatem ex, obcaecati ipsum placeat, minus similique accusantium nesciunt soluta autem laborum. Est molestias magnam consectetur quidem iure quas. Non, voluptatem quod.adipisicing elit.</div>
+</body>
+</html>
