@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nuotrauku-galerija</title>
+    <style>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            color: lightgrey;
+        }
+
+        nav a:active {
+            color: rgb(72, 69, 69);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 15px 0;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .courusel {
+            display: flex;
+            flex-wrap: wrap;
+            width: 860px;
+            gap: 20px;
+        }
+      
+        .aprasymas {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#Show all">Show all</a></li>
+            <li><a href="#Nature">Nature</a></li>
+            <li><a href="#Cars">Cars</a></li>
+            <li><a href="#People">People</a></li>
+        </ul>
+    </nav>
+    <!-- <main>
+        <section id="Show all"></section>
+        <section id="Nature"></section>
+        <section id="Cars"></section>
+        <section id="People"></section>
+    </main> -->
+    <div class="courusel">
+        
+        <div class="nuotrauka">
+            <img src="mountains.jpg">
+            <p class="aprasymas">mountains Lorem, ipsum dolor.</p>
+        </div>
+        
+        <div class="nuotrauka">
+            <img src="lights.jpg">
+            <p class="aprasymas">lights Lorem, ipsum dolor.</p>
+        </div>
+       
+        <div class="nuotrauka">
+            <img src="nature.jpg">
+            <p class="aprasymas">Nature Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        
+        <div class="nuotrauka">
+            <img src="old.jpg">
+            <p class="aprasymas">Old car Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+        <div class="nuotrauka">
+            <img src="classic.jpg">
+            <p class="aprasymas">classics Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="nuotrauka">
+            <img src="animal.jpg">
+            <p class="aprasymas">animals Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="nuotrauka">
+            <img src="men.jpg">
+            <p class="aprasymas">men Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="nuotrauka">
+            <img src="people.jpg">
+            <p class="aprasymas"> people</p>
+        </div>
+    </div>
+
+</body>
+</html>

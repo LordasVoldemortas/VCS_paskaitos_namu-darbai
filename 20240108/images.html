@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+    <style>
+        .small-photo {
+            width: 150px;
+            height: 150px;
+        }
+        .fitted-photo {
+            width: 500px;
+            height: 500px;
+            /* nuotraukos proporciju islaikymas */
+            object-fit: cover;
+        }
+        .float-left {
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>pirmas pvz<!-- nuotraukos talpinimo elementas <img> , jis savaime uzsidarantis -->
+    <!-- naudojama isorine nuoroda -->
+    <img src="https://static.india.com/wp-content/uploads/2015/11/089.jpg">
+    </h2>
+    
+    <h2>antras pvz
+        <!-- lokali foto -->
+        <img src="download.jpg">
+    </h2>
+   <h2>trec pvz <!-- alt atributas nurodo aternatyvu teksta kuris atvazduojamas jeigu nepavyksta rasti nuotraukos -->
+    <img src="downl.jpg" alt="Nuotraukos aprasymas">
+   </h2>
+   <h2>ketv pvz
+    <!-- priskiriamas nuotraukos pavadinimas, kuris atvaizduojamas uzvedus su pele ant nuotraukos -->
+    <img src="kate.jpg" title="kate su akiniais">
+    </h2>
+    <h2>penkt pvz
+    <!-- notraukos manipuliavimas dydzio -->
+    <img src="download.jpg" class="small-photo"> 
+    </h2>
+    <h2> sest pvz
+    <!-- aukscio ir plocio nusttymas atributu pagalba -->
+    <img src="download.jpg" class="small-photo" width="150px" height="150px"> 
+    <!-- wikipedijoj vaizdo krastiniu santykis -->
+    </h2>
+   <h2>sept pvz
+    <img src="kate.jpg" class="fitted-photo"> 
+   </h2>
+   <h2> ast pavz
+    <img src="kate.jpg" class="float-left">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium eaque fugit inventore esse eos.</p>
+   </h2>
+</body>
+</html>
