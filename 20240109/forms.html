@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom:5px 0;
+        }
+
+        input {
+            display: block;
+            width: 200px;
+            border: 1px solid gray;
+            padding: 10px 20px;
+            background-color: azure;
+        }
+
+        /* selektorius skirtas isfiltruoti elementa pagal atributa IR jo reiksme */
+        input[type="checkbox"] {
+            width: unset;
+            display: inline;
+        }
+        
+        input[type="radio"] {
+            width: unset;
+            display: inline;
+        }
+
+        select  {
+            width: 100%;
+            border: 1px solid gray;
+            padding: 10px 20px;
+            background-color: azure;
+        }
+
+        textarea {
+            width: 00px;
+            height: 100px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- form elementas nera privalomas laukeliams atvaizduoti, taciau turi savo unikalu funkcionaluma -->
+    <form>
+        <!-- input - laukelis -->
+        <!-- type atributas nurodo laukelio turinio tipa -->
+        <!-- text - tekstinis laukelis primantis visus simbolius -->
+        <div>
+            <input type="text">
+        </div>
+        <div>
+            <!-- label elementas skirtas nurodyti laukeli0 turini vartotojui -->
+            <label>Jusu vardas:</label>
+            <input type="text">
+        </div>
+        <div>
+            <!-- placeholder - isnykstantis tekstas is laukelio vidaus pradedant jame rasyto -->
+            <input type="text" placeholder="Vardenis Pavardenis">
+        </div>
+        <div>
+            <!-- password tipas paslepia vedama teksta -->
+            <label>Slaptazodis</label>
+            <input type="password">
+        </div>
+        <div>
+            <!-- number nurodo skaiciu -->
+            <label>Jusu amzius</label>
+            <input type="number">
+        </div>
+        <div>
+            <!-- spalvos pasirinkimas is visu -->
+            <label>Pasirinkite spalva</label>
+            <input type="color">
+        </div>
+        <div>
+            <!-- spalvos pasirinkimas is konkreciu -->
+            <label>Pasirinkite spalva is saraso</label>
+            <input type="color" list="colors">
+            <datalist id="colors">
+                <option value="#212529">pirma</option>
+                <option value="#f1f1f1">antra</option>
+            </datalist>
+        </div>
+        <div>
+            <!--  datos pasirinkimas-->
+            <label>datos pasirinkimas</label>
+            <input type="date">
+        </div>
+        <div>
+            <!-- datos ir laiko pasirinkimas -->
+            <label>datos ir laiko pasirinkimas</label>
+            <input type="datetime-local">
+        </div>
+        <div>
+            <!-- failo pasirinkimas -->
+            <label>Failo pasirinkimas</label>
+            <input type="file">
+        </div>
+        <div>
+            <!-- keliu failu pasirinkimas -->
+            <label>Keliu failu pasirinkimas</label>
+            <input type="file" multiple>
+        </div>
+        <div>
+            <!-- value - kas butu parasyta, reiksme nedingsta, galima tik papildyti -->
+            <label>Priskirta reiksme</label>
+            <input type="text" value="pries tai buvusi reiksme">
+        </div>
+        <div>
+            <!-- disabled - isjungia laukeli, negalima nieko keisti jame, bet galima kopijuoti -->
+            <label>Isjungti laukeliai</label>
+            <input type="text" value="https://google.com" disabled>
+        </div>
+        <div>
+            <!-- readonly - neredaguojamas laukelis -->
+            <label>neredaguojami laukeliai</label>
+            <input type="text" value="https://google.com" readonly>
+        </div>
+        <div>
+            <!-- varneles uzdejimas -->
+            <label>
+                <input type="checkbox">
+                sutinku su vartojimo politika
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="naujienlaiskis">
+            <label for="naujienlaiskis">Sutinku gauti naujienlaiski</label>
+        </div>
+        <div>
+            <h4>pasirinkite jus dominancia tema</h4>
+            <!-- radio - vienas is keliu -->
+            <label>
+                <input type="radio" name="topic">
+                saskaitos
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="radio" name="topic">
+                dakaras
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="topic">
+                nauju paslaugu uzsakymas
+            </label>
+        </div>
+
+        <div>
+            <h4>pasirinkite pastomata</h4>
+            <select>
+                <option>Sapiegos 12 Kaunas</option>
+                <option>Ligonines 14 Klaipeda</option>
+                <option>Konstitucijos pr 118, Vilnius</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Jusu zinute</label>
+            <textarea></textarea>
+        </div>
+
+        <div>
+            <button>Siusti</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktine forma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: rgb(199, 157, 236);
+        }
+
+        input {
+            background-color: rgb(244, 244, 244);
+            color: lightgrey;
+            font-size: 12px;
+            border: 5px solid white;
+            width: 180px;
+            height: 25px;
+            padding: 10px;
+            margin-left: -5px;
+        }
+
+        textarea {
+            width: 180px;
+            height: 60px;
+            resize: none;
+            padding: 10px;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgb(244, 244, 244);
+            border: 5px solid white;
+            margin-left: -5px;
+        }
+
+        .spalva {
+            color: grey;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        button {
+            background-color: rgb(74, 202, 222);
+            color: white;
+            height: 40px;
+            width: 100px;
+            border:5px solid white;
+            font-size: 12px;
+        }
+
+        .container {
+            width: 600px;
+            height: 400px;
+            display: flex;
+            color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            
+        }
+
+        .left {
+            width: 50%;
+            color: white;
+            background-color:rgb(74, 202, 222); 
+            padding: 20px 60px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .right {
+            width: 50%;
+            color: black;
+            background-color: white;
+            padding: 20px 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left">
+            <h1>Let's Chat</h1>
+            <p>Whether you have a question, want to start a project ot simply want to connect.</p>
+
+            <p>Feel free to send me a message in the contact form</p>
+        </div> 
+        <div class="right">
+            <h1>Contact</h1>
+            <p class="spalva">* Required</p>
+            <div>
+                <input type="text" placeholder="Name *">
+            </div>
+            <div>
+                <input type="text" placeholder="Email *">
+            </div>
+            <div>
+                <input type="text" placeholder="Company">
+            </div>
+            <div>
+                <input type="number" placeholder="Phone">
+            </div>
+            <div>
+                <textarea placeholder="Message"></textarea>
+            </div>
+            <div>
+                <button>SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
