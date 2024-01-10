@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* before pries turini, after - po */
+        h1::before {
+            content: "Antraste: ";
+            background-color: purple;
+            color: wheat;
+            display: block;
+            padding: 10px 20px;
+        }
+
+        h1::after {
+            content: " Antrastes pabaiga";
+            background-color: palevioletred;
+            color: wheat;
+            display: block;
+            padding: 10px 20px;
+        }
+        
+        /* su pseudo elementu galima atlikti ta pati kaip su div, tik nebutu tuscio div elemento */
+        body::after {
+            content:"";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-color: plum;
+        }
+
+        /* su pseudo elementu galima atlikti ta pati kaip su div, tik nebutu tuscio div elemento */
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: palevioletred;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h2><div></div>Lorem ipsum dolor sit amet.</h2>
+</body>
+</html>
