@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 14px;
+            background-color: grey;
+        }
+
+        .container {
+            width: 740px;
+            height: 350px;
+            margin: 0 auto;
+            background-color: white;
+           
+        }
+
+        img {
+            width: 200px;
+            display: block;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .stulpeliai {
+            display: block;
+        }
+        
+        .article {
+            position:absolute;
+            background-color: black;
+            color:white;
+            bottom: 0;
+            left:0px;
+            width: 180px;
+            height: 100px;
+            margin-left: 15px;
+            padding: 10px;
+            font-size: 12px;            
+        }
+        .relative {
+            position: relative;
+            
+        }
+        .travel {
+            /* position: absolute; */
+            background-color: red;
+            color:white;
+            /* top:5px;
+            left:15px; */
+
+        }
+        .food {
+            /* position: absolute; */
+            background-color: blue;
+            color:white;
+            /* top:5px;
+            right:15px; */
+
+        }
+
+        .tags {
+            display: flex;
+            gap:20px;
+            margin-bottom:8px;
+        }
+        .small-text {
+            font-size: 8px;
+            color: gray;
+            margin-top: 10px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        <ul>
+            <div class="stulpeliai">
+                <li>
+                    <div class="relative">
+                        <img src="nuotraukos/img_1.jpg.webp" alt="">
+                        <span class="article">The AI magically removes moving ojbects from video
+                            <div class="small-text">July 19, 2019</div>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="relative">
+                        <img src="nuotraukos/img_2.jpg.webp" alt="">
+                        <span class="article">The AI magically removes moving ojbects from video
+                            <div class="small-text">July 19, 2019</div>
+                        </span>
+                    </div>
+                </li>
+            </div>
+
+            <li>
+                <div class="relative">
+                    <img src="nuotraukos/img_v_1.jpg.webp" alt="">
+                    <span class="article">                   
+                        <div class="tags">
+                            <span class="travel">Travel</span>
+                            <span class="food">Food</span>
+                            
+                        </div>
+                        The AI magically removes moving ojbects from video
+                        <div class="small-text">July 19, 2019</div>
+                    </span>
+                    
+                </div>
+            </li>
+            <div class="stulpeliai">
+                <li>
+                    <div class="relative">
+                        <img src="nuotraukos/img_3.jpg.webp" alt="">
+                        <span class="article">The 20 Biggest Fintech Companies in America 2019
+                            <div class="small-text">July 19, 2019</div>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="relative">
+                        <img src="nuotraukos/img_4.jpg.webp" alt="">
+                        <span class="article">The 20 Biggest Fintech Companies in America 2019
+                            <div class="small-text">July 19, 2019</div>
+                        </span>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        </header>
+    </div>
+</body>
+
+</html>
