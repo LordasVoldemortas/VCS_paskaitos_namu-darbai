@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border radius</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+        }
+        .purple {
+            background-color: purple;
+        }
+        .radius {
+            /* visiems 4 kampams uzlenkimai */
+            border-radius: 20px;
+            /* pagal laikrodzio rodykle nuo virsutinio kairio kampo */
+            border-radius: 20px 50px 30px 100px ;
+            /*  */
+        }
+        .orange {
+            background-color: orange;
+        }
+        .overflow {
+            overflow: hidden;
+        }
+        .tomato {
+            background-color: tomato;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .content {
+            padding:50px;
+        }
+        .circle {
+            /* absoliutus apskritimas */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box purple radius"></div>
+    <div class="box orange radius overflow">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa neque, praesentium in quia laborum quae eaque, laboriosam delectus sit iusto iste. Porro itaque quam voluptatum assumenda tempore nostrum veniam eius!
+    </div>
+    <div class="content tomato radius overflow">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aperiam commodi vero magni at quis fugit fuga tempore, illo mollitia!
+    </div>
+    <div class="box yellow circle"></div>
+</body>
+</html>
