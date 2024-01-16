@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        background-image: url(img/background-pfoto.jpg);
+
+    }
+
+    .container {
+        width: 1440px;
+        height: 912px;
+        margin: 0 auto;
+        display: flex;
+        background-color: white;
+        position: relative;
+        /* border-radius: 50px; */
+        border-radius: 50px;
+        overflow: hidden;
+        padding: 46px 95px;
+        /* padding-left: 95px;
+        padding-top: 46px; */
+    }
+
+    .left {
+        width: 50%;
+        background-color: white;
+    }
+
+    .right {
+        width: 50%;
+        position: relative;
+        /* background-color: #6DE1C2; */
+        /* position: absolute;
+        top:0;
+        right:0 */
+    }
+
+    .box {
+        width: 548px;
+        height: 104px;
+        border-style: dashed;
+        border-color: #8E8E8E;
+        color: #8E8E8E;
+
+        padding: 30px;
+        font-size: 14px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-top: 10px;
+    }
+
+    .forma {
+
+        width: 540px;
+        color: #8E8E8E;
+        font-size: 14px;
+        line-height: 11px;
+        margin-bottom: 8;
+    }
+
+    p {
+        font-size: 14px;
+        color: #8E8E8E;
+        text-align: left;
+        width: 540px;
+        line-height: 24px;
+        padding-right: 10px;
+    }
+
+    button {
+        width: 549px;
+        height: 54px;
+        background-color: #0982FE;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 10px;
+        border-color: #0982FE;
+        margin-bottom: 16px;
+    }
+
+    .checkboxs {
+        font-size: 14px;
+        padding: 12px 16px 12px 4px;
+    }
+
+    .icons {
+        display: flex;
+        font-size: 14px;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 50px;
+    }
+
+    .color {
+        color: black;
+    }
+
+    a {
+        color: #DD5471;
+    }
+
+    .aprasymas {
+        display: block;
+    }
+
+    span {
+        color: #6DE1C2;
+    }
+
+    h1 {
+        font-size: 46px;
+        font-weight: 400px;
+    }
+
+    .green {
+        width: 419px;
+        height: 100%;
+        background-color: #6DE1C2;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+    }
+
+    .boxword {
+        color: #8E8E8E;
+        font-size: 13px;
+    }
+
+    .contact {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .loginsingup {
+        display: flex;
+        justify-content: space-between;
+        width: 548px;
+        gap: 24px;
+    }
+
+    input[type="text"] {
+        width: 548px;
+        height: 38px;
+        border: none;
+        border-bottom: 1px solid #8E8E8E;
+        padding-left: 10px;
+    }
+    .little-box{
+        background-color: white;
+        width: 157px;
+        height: 98px;
+        padding: 12px 48px 4px 4px;
+        line-height: 21px;
+        position: absolute;
+        top:0;
+        left:0;
+        margin-left: 44px;
+        margin-top: 22px;
+        border-radius: 10px;
+    }
+    .small {
+        font-size: 13px;
+        font-weight: bold;
+        color:#0982FE
+    }
+    .smaller {
+        font-size: 13px;
+        color:#0982FE;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="green"></div>
+        <div class="left">
+            <h1>Get in <span>touch</span></h1>
+            <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit
+                netus.</p>
+            <div class="forma">
+                <div>
+                    <input type="text" placeholder="Contact name">
+                </div>
+                <div>
+                    <input type="text" placeholder="Street">
+                </div>
+                <div class="loginsingup">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Postcode">
+                </div>
+                <div>
+                    <input type="text" placeholder="Contact phone">
+                </div>
+                <div>
+                    <input type="text" placeholder="E-mail">
+                </div>
+                <div>
+                    <input type="text" placeholder="Let's talk about your idea">
+                </div>
+            </div>
+
+            <div class="box">
+                
+                <img src="img/upload.png" alt="ikonele"> Upload Additional file </div>
+            <span class="boxword">Attach file. File size of your documents should not exceed 10MB</span>
+            <div class="checkboxs">
+                <input class="checkboxs" type="checkbox" id="checkbox">
+                <label>I want to protect my data by signing an NDA</label>
+            </div>
+            <div>
+                <button>SUBMIT</button>
+            </div>
+            <div>
+                <div class="icons">
+                    <div class="contact">
+                        <img src="img/phone.png" alt="Phone">
+                        <div class="aprasymas">
+                            <div class="color">phone</div>
+                            <a href="#">111 111 111</a>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="img/email.png" alt="Email">
+                        <div class="aprasymas">
+                            <div class="color">E-MAIL</div>
+                            <a href="#">info@company.com</a>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="img/email.png" alt="Helpdesk">
+                        <div class="aprasymas">
+                            <div class="color">HELPDESK</div>
+                            <a href="#">https://helpdesk.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="little-box">
+                <div class="small">Headquarters Company s. r. o</div>
+                <div class="smaller">Street. 51 100 00 Prague</div>
+            </div>
+            <img src="img/map.jpg" alt="map">
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
