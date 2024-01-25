@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: General Sans;
+            src: url(fonts/GeneralSans-Regular.otf);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: General Sans;
+            src: url(fonts/GeneralSans-Medium.otf);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: General Sans;
+            src: url(fonts/GeneralSans-Semibold.otf);
+            font-weight: 600;
+        }
+
+        body {
+            font-family: General Sans;
+            color: #374151;
+            font-size: 16px;
+
+        }
+
+        .pirmas {
+            display: block;
+            text-align: left;
+
+        }
+
+        footer {
+            background-color: #111827;
+        }
+
+        .last-section {
+            background-color: #111827;
+            padding: 64px 112px;
+        }
+
+        .btn {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 16px;
+            line-height: 20px;
+        }
+
+        .btn-primary {
+            background-color: #0876DD;
+            border-color: #0876DD;
+
+        }
+
+        .btn-lg {
+            padding: 12px 16px;
+            font-size: 16px;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 80px;
+        }
+
+        h2 {
+            font-size: 56px;
+            line-height: 72px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .logo {
+            width: 107px;
+            height: 29px;
+        }
+
+        .baltas {
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        .white {
+            color: #9ca3af;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.14px;
+        }
+
+        .little-paragraph {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .small-box {
+            padding: 24px;
+        }
+
+        .smaller-box {
+            padding-top: 24px;
+        }
+
+        a {
+            color: #E0F2FE;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .text {
+            color: #9CA3AF;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        /* .text-white {
+            padding: 48px 208px;
+        } */
+
+        /* Mobili versija */
+        .intro {
+            padding-top: 48px;
+            padding-bottom: 80px;
+        }
+        /* Plansete */
+        @media screen and (min-width: 768px) {
+            .intro {
+                padding-top: 80px;
+            }
+        }
+
+        /* Desktopas */
+        @media screen and (min-width: 992px) {
+            .intro {
+                padding-top: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header style="padding: 30px 0">
+            <div class="container d-flex align-items-center justify-content-between header-wraper">
+                <div cllass="logo">
+                    <img src="Landing-img/Logo.svg" alt="Logo">
+                </div>
+                <button type="button" class="btn btn-primary">Get Early Access</button>
+            </div>
+        </header>
+        <section class="intro">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h1>Event Registration Reimagined</h1>
+                        <p style="padding-top: 16px;">Manage your event registrations hassle free and without any dependency with the technical
+                            team. Isn’t it sounds amazing?</p>
+                        <div style="padding-top: 40px;">
+                            <button type="button" class="btn btn-primary btn-lg">Get Early Access</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="Landing-img/mockups.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section>
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <h2>All-in-one Event Platform</h2>
+                    <p>Deliver an exceptional event experience</p>
+                </div>
+                <div>
+                    <img src="Landing-img/Video.png" alt="" style="width: 768px; padding-top: 48px;">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center" style="padding: 40px 0;">
+                <div class="row align-items-center">
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/1.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Event Metrics</h3>
+                            <p class="little-paragraph">Track your ticket sales, attendees count and more with much
+                                ease.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/2.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Oragniser App</h3>
+                            <p class="little-paragraph">Manage your events at the palm of your hand with our Oragniser
+                                App.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/3.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Registration & Ticketing</h3>
+                            <p class="little-paragraph">Manage your Event registrations and ticket sales easier and
+                                receive payments instantly.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/4.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Attendee Engagement</h3>
+                            <p class="little-paragraph">Engage with your attendees via email, surveys and much more.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/5.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Branded Badges</h3>
+                            <p class="little-paragraph">Create your custom branded badges for your events and get them
+                                printed.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 small-box">
+                        <img src="Landing-img/6.png" alt="">
+                        <div class="smaller-box">
+                            <h3>Add to Calendar</h3>
+                            <p class="little-paragraph">Effortless way to add your events to registered users calendars
+                                by 1-click.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container" style="padding: 96px 0;">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h2>Integrate with your favorite tools</h2>
+                        <p>Connect RegiM with your most favorite sales and marketing tools</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="Landing-img/Logos.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="last-section">
+            <div class="container text-center text-white" style="padding: 48px 0;">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <h1 class="text-white baltas" style="padding-bottom: 16px;">Create your event with RegiM</h1>
+                        <p style="padding-bottom:40px"> Leveraging our virtual and live event experience, Hubilo offers everything you need to set
+                            up your next hybrid event from registration to executing a flawless event.</p>
+                        <div>
+                            <button type="button" class="btn btn-primary btn-lg">Get Early Access</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer>
+            <div class="container text-white">
+                <div class="text-center" style="padding-bottom: 50px;">
+                    <img src="Landing-img/LOGO-apatiis.png" alt="" style="margin-bottom: -20px;">
+                    <div class="border border-bottom-1"></div>
+                </div>
+                <div class="row align-items-center justify-content-between white">
+                    <div class="col-12 col-lg-6">
+                        <p class="text">© RegiM 2022. Made with love by Landify</p>
+                    </div>
+                    <div class="col-12 col-lg-6 text-end">
+                        <p class="text">For further details, drop a mail to <a href="">hello@landify.design</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html> -->
