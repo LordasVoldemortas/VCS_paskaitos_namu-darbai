@@ -1,0 +1,13 @@
+.br {
+    display: grid;
+    grid-template-columns: repeat(25, 10px);
+    grid-template-rows: repeat(25, 10px);
+
+    gap: 1px
+}
+
+.br {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000; }
