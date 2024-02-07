@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function rand(min, max) {
+        //     min = Math.ceil(min);
+        //     max = Math.floor(max);
+        //     return Math.floor(Math.random() * (max - min + 1) + min);
+        // }
+    
+        // klasikines funkcijos aprasymas
+        // function suma (a, b){
+        //     // funkcija i save priima parametrus (parameters) (a ir b)
+        //     console.log(a + b);
+        // }
+
+        // issaukiant funkcija perduodami ARGUMENTAI (arguments)
+        // suma(10, 30);
+        // suma(5, 20);
+
+            function suma( a, b) {
+                return a + b;
+            }
+
+            let padauginta = suma(9, 11) * 2;
+            let padalinta = suma(9, 11) * 2;
+
+            console.log(padauginta);
+            console.log(padalinta);
+
+            console.log(atimtis(50, 20))
+
+            // named function - pozicionavimas skripta neturi itakos, kuomen=t naudojamas funkcijos raktazodis
+            function atimtis(a,b) {
+                return a - b
+            }
+
+            // neivardinta funkcija (anonymus funkcion)
+            const stringoGrazinimas = function () {
+                return 'funkcija grazino stringa'
+            }
+            // issaukiant funckija butina nurodyti skliaustelius salia pavadinimo
+            console.log(stringoGrazinimas);
+            
+            
+            let x = 10
+            console.log(x);
+            
+    </script>
+</body>
+</html>
