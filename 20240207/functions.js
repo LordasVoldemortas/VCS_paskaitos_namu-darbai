@@ -115,6 +115,7 @@ console.log(`nelyginis ${nelyginis}`)
 
 // 
 
+array.forEach((value, index) => index %2 === 0  ? lyginis.push(value) : nelyginis.push(value))
 // 2g
 
 for(let i = 0; i < array.length; i++) {

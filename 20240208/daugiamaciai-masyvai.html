@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daugiamaciai (multidimentional array)</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        // statinemis pozicijomis kuriamas daugiamatis masyvas
+        // array[0] = [];
+        // array[0][0] = 10;
+
+
+        // const array = [];
+
+        // for (let i = 0; i < 10; i++) {
+        //     array[i] = [];
+
+        //     for (let x = 0; x < 10; x++) {
+        //         array[i][x] = rand(10, 50)
+        //     }
+        // }
+
+        // console.log(array)
+
+
+        const array = [];
+
+for (let i = 0; i < 10; i++) {
+    array[i] = [];
+
+    for (let x = 0; x < 10; x++) {
+        array[i][x] = [];
+
+        for (let  y = 0; y < 10; y++) {
+            array[i][x][y] = rand(10, 50);
+        }
+    }
+}
+
+console.log(array)
+
+// reiksmes keitimas
+
+array[0][1][2] = 'pakeistas'
+
+console.log(array);
+
+// visus skaicius esancius masyve padaugint is 2
+
+for(let i = 0; i < array.length; i++) {
+    for(let x = 0; x < array.length[i]; x++) {
+        for(let y = 0; y < array.length[i][x]; y++) {
+            array[i][x][y] = array[i][x][y] *= 2;
+        }
+    }
+}
+
+console.log(array)
+    </script>
+</body>
+
+</html>
