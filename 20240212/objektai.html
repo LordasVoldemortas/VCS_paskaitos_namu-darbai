@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objektai</title>
+</head>
+<body>
+    <script>
+        // OBJEKTO SUKURIMAS
+        // konstatavus objekta reikia deti RIESTINIUS sklilaustus
+        // const objektas = {};
+
+        // console.log(typeof objektas);
+    
+        // indexo priskirimas masyve
+        // const masyvas = [];
+        // masyvas[0] = 'reiksme'
+        
+        // masyvas['indeksas'] = 'Reiksme'
+        // console.log(masyvas)
+
+        //  OBJEKTO SUKURIMAS SU REIKSMEMIS
+        // objekte indeksas vadinsis KEY
+        const objektas = {
+            // objekte esanti reiksme, kuri nera funkcija vadinasi SAVYBEMIS(PROPERTIES)
+            raktazodis: 'reiksme', 
+            skaicius: 10,
+            // objekte patalpinta funkcija vadinasi METODU (METHOD)
+            funkcija: function() {
+                return true;
+            }
+        };
+        
+        // objekto atvaizdavimas
+        console.log(objektas);
+
+        // reiksmes istraukimas
+        console.log(objektas.skaicius);
+
+        // naujos reiksmes priskyrimas/ pakeitimas
+        objektas.skaicius = 25;
+        console.log(objektas.skaicius);
+
+        // masyvo kurimas objekte
+        objektas.masyvas = [10, 25, 35];
+        console.log(objektas)
+
+        // metodo issaukimas is objekto:
+        console.log(objektas.funkcija());
+
+        // kreipimasis i neegzistuojancia savybe
+        console.log(objektas.boolean);
+
+        // trynimas is objekto
+        delete objektas.skaicius;
+        console.log(objektas)
+
+        // pagr skirtumas tarp objekto ir masyvo - prototipas.
+        
+        // naujo tuscio objekto sukurimas
+        const naujasObjektas = {};
+
+        naujasObjektas.savybe = 88;
+        console.log(naujasObjektas)
+        // reiksmes keitimas naudojant lauztinius skliaustus
+        naujasObjektas['savybes'] = 77;
+        // reiksmes keitimas naudojant lauztinius skliaustus
+        console.log(naujasObjektas['savybes'])
+
+        console.log(naujasObjektas)
+
+        // pvz kaip paimti reiksme is objekto panaudojant kintamojo reiksme
+        naujasObjektas.skaicius = 99;
+
+        console.log(naujasObjektas);
+
+        const raktazodis = 'skaicius';
+
+        console.log(naujasObjektas[raktazodis]);
+
+        // objekto iteravimas
+        const obkeltaskonvertuotasimasyva = Object.entries(naujasObjektas)
+
+        for(let i = 0; i<obkeltaskonvertuotasimasyva.length; i++) {
+            console.log(obkeltaskonvertuotasimasyva[i])
+        }
+
+        console.log('reiksmes paemimas naudojant for in cikla')
+        for(const key in naujasObjektas) {
+            console.log(naujasObjektas[key])
+        }
+
+        // FOR OF ciklas neskirtas objektams
+        // uncaught typeerrorL naujasobjektas is not iterable
+        // for(const value of naujasObjektas) {
+        //     console.log(value)
+        // }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objektu ir DOM pasikartojimas</title>
+    <!-- jei norime skriipta naudoti isorini, reikia deklaruoti ji po 'title' -->
+    <!-- <script src="main.js" defer> <script> -->
+        <style>
+            .red {
+                color: red;
+            }
+            .game {
+                width: 660px;
+                height: 660px;
+                margin: 0 auto;
+                background-color: bisque;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .game div {
+                width: 150px;
+                height: 150px;
+                background-color: brown;
+            }
+        </style>
+</head>
+<body>
+    <div class="app"> </div>
+    <div class="game"></div>
+    <script>
+        const objektas = {
+            // savybes (property)
+            // key: value
+            ugis: 180,
+            svoris: 82,
+            // metodas (method)
+            kmi: function() {
+                return 'skaicius'
+            }
+        }
+
+        console.log(objektas.ugis); //pasiimti reiksme
+
+        objektas.amzius = 88; //prideti reiksme
+        console.log(objektas)
+
+        console.log(objektas.profesija); //grizta undefined atsakymas, nes nebuvo priskirta
+
+        delete objektas.ugis; //istrinti reiksme
+        console.log(objektas);
+
+        document.querySelector('.app');
+        console.log(document.querySelector('.app'));
+
+        document.querySelector('.app').innerHTML = `ugis: <strong> ${objektas.ugis} </strong>` //modifikavimas turinio
+
+        document.querySelector('.app').innerHTML += `amzius: <strong> ${objektas.amzius}</strong>` //pridejimas turinio neprarandant seno turinio
+
+        document.querySelector('.app').classList.add('red'); //klasiu modifikavimas, aprasyti stiliuje galima
+
+        // blokeliu uzpildymas kvadrate
+        const game = document.querySelector('.game'); 
+        for(let i =0; i < 16; i++) {
+            game.innerHTML += `<div></div>`
+        }
+
+    </script>
+    
+</body>
+</html>

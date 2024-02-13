@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div id="tekstas">An American in Paris</div>
+    <script>
+        // DOM - document object model
+        // document yra globalus kintamasis su dom objekto informacija
+        console.log(document);
+
+        // bazinis DOM pavizdys
+        // const dom = {
+        //     html: {
+        //         lang: "en", 
+        //         head: {
+        //             meta: {
+        //                 charset: "UTF-8"
+        //             },
+        //             title: {
+        //                 value: "DOM"
+        //             }
+        //         },
+        //         body: {
+        //             value: ""
+        //         }
+        //     }
+        // }
+
+        // naujo dokumento pavadinimo priskyrimas
+        document.title = 'Dokumento Objekto Modelis'
+        console.log(document.title)
+
+        // teksto esancio elemente paemimas naudojant getelementbyid
+
+        // console.log(document.getElementById('tekstas').);
+        // console.log(document.getElementById('tekstas').textContent);
+        // surasto elemento modelio priskyrimas prie kintamojo
+        const tekstas = document.getElementById('tekstas');
+        tekstas.textContent = tekstas.textContent.replaceAll(/a/gi, '*');
+
+        console.log()
+    </script>
+</body>
+
+</html>
