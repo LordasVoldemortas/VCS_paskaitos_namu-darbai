@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "labai gera preke",
+        "active": false,
+        "price": 12.59
+    },
+    {
+        "id": 2,
+        "title": "nauja preke",
+        "active": true,
+        "price": 13.59
+    }
+]
