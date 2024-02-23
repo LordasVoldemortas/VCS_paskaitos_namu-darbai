@@ -1,0 +1,36 @@
+.kamuoliukai {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.kamuoliukai div {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kamuoliukai div.yellow {
+    background-color: rgb(223, 205, 12);
+    color: black;
+}
+
+.kamuoliukai div.red {
+    background-color: rgb(193, 11, 11);
+    color: white;
+}
+
+.kamuoliukai div.blue {
+    background-color: rgb(10, 107, 225);
+    color: white;
+}
+
+.kamuoliukai div.green {
+    background-color: rgb(18, 177, 16);
+    color: white;
+}
