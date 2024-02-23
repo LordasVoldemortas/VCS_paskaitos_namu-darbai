@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>google search</h2>
+        <form>
+            <input type="text" class="test m-3 form-control" placeholder="produkto pavadinimas"
+                onkeyup="handleSearch(event)">
+            <button type="submit" class="btn btn-primary">search</button>
+            <div class="result"></div>
+            <div class="finalresults"></div>
+        </form>
+    </div>
+
+    <script>
+        const phrases = ['What is my IP', 'How many weeks in a year', 'How many ounces in a cup', 'How to screenshot on Mac', 'When is the Super Bowl', 'When is Easter', "When is Father's Day", 'What is Juneteenth', 'How do I register to vote', 'When is Thanksgiving']
+
+        console.log(phrases)
+        const handleSearch = (e) => {
+            const filter = document.querySelector('.test').value.toLowerCase();
+            const text = document.querySelector('.result');
+            text.innerHTML = '';
+            const suggestions = document.querySelector('.suggestions');
+            let counter = 0;
+            // if(phrases.includes(e.target.value)) {
+            //     console.log('ar veikia')
+            // }
+            for (i = 0; i < phrases.length; i++) {
+                let textValue = phrases[i].toLowerCase();
+                if (textValue.includes(filter)) {
+                    const textDisplay = document.createElement('div');
+                    textDisplay.textContent = phrases[i];
+                    textDisplay.addEventListener('click', function () {
+                        document.querySelector('.test').value = this.textContent;
+                        text.innerHTML = '';
+                    })
+                    text.appendChild(textDisplay)
+                    counter++;
+                    if (counter >= 5) {
+                        return
+                    }
+                    if (filter === "") {
+                        text.innerHTML = '';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
