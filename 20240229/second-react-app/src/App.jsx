@@ -1,33 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Button from './components/button/Button'
+import icon from './assets/airplane-fill.svg'
+import Card from './components/card/Card'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const data = [
+    {
+      title: 'Instant Server Start',
+      content: 'On demand file serving over native ESM, no bundling required!'
+    },
+    {
+      title: 'Lightning Fast HMR',
+      content: 'Hot Module Replacement (HMR) that stays fast regardless of app size.'
+    },
+    {
+      title: 'Rich Features',
+      content: 'Out-of-the-box support for TypeScript, JSX, CSS and more.'
+    },
+    {
+      title: 'Optimized Build',
+      content: 'Pre-configured Rollup build with multi-page and library mode support.'
+    },
+    {
+      title: 'Universal Plugins',
+      content: 'Rollup-superset plugin interface shared between dev and build.'
+    },
+    {
+      title: 'Fully Typed APIs',
+      content: 'Flexible programmatic APIs with full TypeScript typing.'
+    }
+  ];
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="buttons">
+        <Button
+          text="Get Started"
+          style="active"
+        />
+        <Button
+          text="Why Vite?"
+        />
+        <Button
+          text="View on GitHub"
+        />
+        <Button
+          text="ViteConf 23!"
+          style="active"
+          showIcon={true}
+        />
+        <Button>
+          <img src={icon} />
+          <span>Pirkti skrydziu bilietus </span>
+        </Button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="cards">
+        {data.map((value, index) =>
+         <Card key={index} value={value}/>
+        )}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
