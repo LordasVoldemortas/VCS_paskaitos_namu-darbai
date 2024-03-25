@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 const comment = model('Comment', new Schema({
     text: {
         type: String,
-        max: 160,
+        maxLength: 160,
         required: true,
     },
     author: {

@@ -4,6 +4,15 @@ import upload from '../middleware/multer.js'
 import bcrypt from 'bcrypt';
 
 const router = Router()
+
+router.get('/:id', async (req, res) => {
+    try {
+       res.send(await User.findById(req.params.id).select(['user_name', 'photo', 'bio', 'email']))
+    }catch {
+        res.status(500).json('ivyko klaida')
+    }
+})
+
 // konkretaus suradimas su psw
 router.get('/users', async (req, res) => {
     res.send(await User.find({ password: "awdawdawd", email: "wilave6994@meogl.com" }).exec());
@@ -55,7 +64,8 @@ router.post('/register', upload.single('photo'), async (req, res) => {
         await User.create(req.body)
         // graziname zinute
         res.json('Vartotojas sekmingai sukurtas')
-    } catch {
+    } catch(e) {
+        console.log(e)
         // ivykus klaidai graziname klaidos koda ir zinute
         res.status(500).json('registruojant vartotoja ivyko klaida')
     }

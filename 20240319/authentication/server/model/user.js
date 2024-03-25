@@ -6,30 +6,30 @@ const user = model('User', new Schema({
         // nurodome, jog vartotojo vardas tures but nesikartojantis visoje kolekcijoje
         unique: true,
         // min 3 simboliu ilgio vardas 
-        min: 3,
+        minLength: 3,
         // max 50 simboliu ilgio vardas
-        max: 50,
+        maxLength: 50,
         // nurodymas, kad reiksme bus reikalaujama
         required: true
     },
     photo: {
         type: String,
-        max: 80,
+        maxLength: 80,
     },
     bio: {
         type: String,
-        max: 180,
+        maxLength: 180,
     },
     email: {
         type: String,
-        min: 5,
-        max: 100,
+        minLength: 5,
+        maxLength: 50,
         unique: true,
     },
     password: {
         type: String,
-        min: 6,
-        max: 100,
+        minLength: 6,
+        maxLength: 100,
         required: true,
     },
     created_at: {

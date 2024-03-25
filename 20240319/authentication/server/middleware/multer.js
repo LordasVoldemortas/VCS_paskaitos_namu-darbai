@@ -43,7 +43,7 @@ const storage = multer.diskStorage({
 //Multer modulio inicijavimas
 const upload = multer({
     //Direktorijos nustatymai ku bus talpinami failai
-    storage: storage,
+   
     limits: { fileSize: 2 * 1024 * 1024 },
     fileFilter: (req, file, next) => {
         const formats = [
@@ -57,6 +57,7 @@ const upload = multer({
         } else {
             next(null, false)
         }
-    }
+    },
+ storage: storage,
 });
 export default upload;

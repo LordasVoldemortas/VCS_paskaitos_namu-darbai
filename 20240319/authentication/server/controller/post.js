@@ -2,12 +2,18 @@ import { Router } from "express";
 import Post from '../model/post.js'
 import upload from "../middleware/multer.js";
 
+
 const router = Router();
 
 // grazinamas visu postu sarasas
 router.get('/', async (req, res) =>{
     try {
-        res.json(await Post.find().populate('author', ['user_name', 'photo']));
+        res.json(
+            await Post
+            .find()
+            .populate('author', ['user_name', 'photo'])
+            .populate('likes')
+    );
     } catch {
         res.status(500).json('ivyko klaida')
     }

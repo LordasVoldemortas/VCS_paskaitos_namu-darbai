@@ -5,12 +5,16 @@ import users from './controller/user.js';
 import posts from './controller/post.js';
 import comments from './controller/comment.js';
 import mongoose from 'mongoose';
+import likes from './controller/like.js'
+import cors from 'cors';
 
 const app = express();
 
 await mongoose.connect('mongodb://localhost:27017/instagram');
 
 app.set('trust proxy', true);
+
+app.use(cors())
 
 // sesijos sukurimas
 app.use(session({
@@ -43,6 +47,9 @@ app.get('/', (req, res) => {
 app.use('/users', users)
 app.use('/posts', posts)
 app.use('/comments', comments)
+app.use('/likes', likes)
+
+app.use('/uploads', express.static('./uploads'))
 
 
 app.listen(3000);
