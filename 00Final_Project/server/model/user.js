@@ -9,15 +9,40 @@ const user = model('User', new Schema({
     },
     last_name: {
         type: String,
-        unique: true,
         minLength: 3,
         maxLength: 50,
         required: true,
     },
-    
+    email: {
+        type: String,
+        minLength: 5,
+        maxLength: 50,
+        unique: true,
+        required: true
+        
+    },
+    // .limit(141),
+    password: {
+        type: String,
+        minLength: 6,
+        maxLength: 100,
+        required: true,
+    },
     party_name: {
         type: String,
-        min: 3,
-        max: 10
+        minLength: 3,
+        maxLength: 100,
+        required: true,
+    },
+    chairman: {
+        type: Boolean,
+        default: false
+    },
+    created_at: {
+        type: Date,
+        default: new Date(),
     }
+    
 }))
+
+export default user
