@@ -21,7 +21,7 @@ const NewUser = () => {
       axios.post('http://localhost:3000/users/register', data)
       .then (resp => {
         setMessage('registracija')
-        navigate('/users');
+        navigate('/chairman');
   })
       .catch(err => setMessage(err.response.data.message));
     }

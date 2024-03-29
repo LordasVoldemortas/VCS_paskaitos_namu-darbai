@@ -9,6 +9,7 @@ import Users from './pages/User.jsx'
 import NewUser from './components/newUser/NewUser.jsx'
 import EditPost from './components/editPost/EditPost.jsx'
 import NewPost from './components/newPost/NewPost.jsx'
+import Chairman from './pages/Chairman.jsx'
 
 const App = () => {
   // const [showNewPost, setShowNewPost] = useState(false)
@@ -38,6 +39,7 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/posts/new-post' element={<NewPost />} />
             <Route path='/posts/edit-user/:identify' element={<EditPost />} />
+            <Route path='/chairman' element={<Chairman />} />
           </Routes>
         </BrowserRouter>
       </MainContext.Provider>
