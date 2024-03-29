@@ -20,7 +20,7 @@ const Post = ({ data }) => {
                 <td>
                     <img src={'http://localhost:3000/uploads/' + data.photo} />
                 </td>
-                <td>{data.resolution_date}</td>
+                <td>{new Date(data.resolution_date).toLocaleDateString('lt-LT')}</td>
                 <td>{data.status_name.name}</td>
                 <td>
                 {data.author && (
@@ -31,8 +31,12 @@ const Post = ({ data }) => {
                   </>
                 )}
                 </td>
-                {/* <td>{data.created_at}</td> */}
+                <td>
+                    <div>{new Date(data.created_at).toLocaleDateString('lt-LT')}</div> 
+                    <div>{new Date(data.created_at).toLocaleTimeString('lt-LT')}</div>
+                </td>
                 <td> <Link to={`/posts/edit-user/` + (data._id)} className="btn btn-warning">Redaguoti</Link></td>
+                <td> <Link to={`/posts/edit-user/` + (data._id)} className="btn btn-danger">Redaguoti</Link></td>
             </tr>
             </>
     )

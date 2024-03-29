@@ -12,6 +12,7 @@ const NewPost = () => {
             e.preventDefault();
       
             const formData = new FormData(e.target);
+            formData.append("author", "660288515e1ae492ad791c7d");
             // formData.append('author', user._id)
             
             axios.post('http://localhost:3000/posts/', formData) /*data? */

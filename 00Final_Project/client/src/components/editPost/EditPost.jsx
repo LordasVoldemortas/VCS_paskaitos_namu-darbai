@@ -71,6 +71,7 @@ const EditPost = () => {
             type="date"
             className="form-control"
             name="created_at"
+            // defaultValue={new Date(form.hearing_at).toLocaleDateString('lt-LT')}
             // defaultValue={message.resolution_date}
           />
         </div>
