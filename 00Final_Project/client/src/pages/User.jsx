@@ -61,17 +61,7 @@ const User = () => {
             <td>{user.email}</td>
             <td>{user.password}</td>
             <td>{user.created_at}</td>
-            <td>
-            <button className="btn btn-danger"
-                    onClick={() => handleDelete(user._id)}
-            >Ištrinti
-            </button> 
-            
-                  <Link to={`/admin/edit-user/${user._id}`}
-                  className="btn btn-warning"
-             >Redaguoti
-                    </Link>
-            </td>
+
           </tr>
         ))}
         

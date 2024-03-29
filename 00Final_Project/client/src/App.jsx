@@ -37,7 +37,7 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/' element={<Home />} />
             <Route path='/posts/new-post' element={<NewPost />} />
-            <Route path='/posts/edit-post/:identify' element={<EditPost />} />
+            <Route path='/posts/edit-user/:identify' element={<EditPost />} />
           </Routes>
         </BrowserRouter>
       </MainContext.Provider>

@@ -22,9 +22,17 @@ const Post = ({ data }) => {
                 </td>
                 <td>{data.resolution_date}</td>
                 <td>{data.status_name.name}</td>
-                <td>{data.created_at}</td>
-                {/* <td></td> */}
-                
+                <td>
+                {data.author && (
+                  <>
+                    <span>{data.author.user_name}</span>
+                    <span>{data.author.last_name}</span>
+                    <span>{data.author.party_name}</span>
+                  </>
+                )}
+                </td>
+                {/* <td>{data.created_at}</td> */}
+                <td> <Link to={`/posts/edit-user/` + (data._id)} className="btn btn-warning">Redaguoti</Link></td>
             </tr>
             </>
     )

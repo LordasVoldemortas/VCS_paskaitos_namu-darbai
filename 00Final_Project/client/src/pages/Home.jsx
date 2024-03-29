@@ -29,7 +29,6 @@ const Home = () => {
         <>
         <h1>Seimo narių darbotvarkės registras</h1>
         <Link to="posts/new-post" className="btn btn-success">Naujas projektas</Link>
-        <Link to={`/admin/edit-user/${user._id}`}className="btn btn-warning">Redaguoti</Link>
          <table className="table">
                 <thead>
                     <tr>
@@ -38,8 +37,9 @@ const Home = () => {
                         <th>Nuotrauka</th>
                         <th>Norima svastymo data</th>
                         <th>Statusas</th> 
+                        <th>Autorius</th>
                         <th>Talpinimo data ir laikas</th>
-                        <th></th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -49,6 +49,7 @@ const Home = () => {
                     setLoading={setLoading}
                     key={post._id}
                 />
+                
             )}
             </tbody>
         </table>

@@ -58,7 +58,7 @@ const NewPost = () => {
             // defaultValue={message.description}
           />
         </div>
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <label>Talpinimo data</label>
           <input
             type="date"
@@ -66,7 +66,7 @@ const NewPost = () => {
             name="created_at"
             // defaultValue={message.resolution_date}
           />
-        </div>
+        </div> */}
         <div className="mb-3">
           <label>Svarstymo data</label>
           <input
