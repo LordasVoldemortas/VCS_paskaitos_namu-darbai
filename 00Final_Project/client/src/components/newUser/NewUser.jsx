@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import MainContext from '../../context/Main.jsx'
@@ -7,6 +7,7 @@ const NewUser = () => {
   const [message, setMessage] = useState();
   const { setUser, user } = useContext(MainContext);
   const navigate = useNavigate();
+
 
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -25,9 +26,10 @@ const NewUser = () => {
   })
       .catch(err => setMessage(err.response.data.message));
     }
-
-    return (
-        <>  
+    console.log(user);
+    
+    return user?.chairman ? (
+        <div className='container'>  
             <h1>Naujas vartotojas</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -57,9 +59,9 @@ const NewUser = () => {
         <button className="btn btn-primary">Pridėti</button>
       </form>
       {message && <div>{message}</div>}
-    </>
+    </div>
         
-    );
+    ) : 'Negalima';
 }
 
 export default NewUser;

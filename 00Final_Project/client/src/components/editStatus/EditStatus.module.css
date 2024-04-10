@@ -1,0 +1,12 @@
+.accepted {
+    color: green;
+  }
+  
+  .rejected {
+    color: red;
+  }
+  
+  .insufficientData {
+    color: yellow;
+  }
+  

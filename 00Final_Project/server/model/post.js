@@ -34,6 +34,7 @@ const post = model('Post', new Schema({
     },
     resolution_date: {
         type: Date,
+        unique: true
 
     },
     created_at: {

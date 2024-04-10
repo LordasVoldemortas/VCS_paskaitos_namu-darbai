@@ -13,6 +13,12 @@ app.use(cors({
     origin: 'http://localhost:5173'
 }));
 
+app.use(session({
+    // slapto frazes nustatymas
+    secret: 'labai slapta fraze',
+    resave: false,
+    saveUninitialized: true,
+}));
 // app.options('*', cors());
 
 app.use(express.urlencoded({
@@ -40,6 +46,7 @@ app.options('/users/register', cors());
 app.use('/users', user)
 app.use('/posts', post)
 app.use('status', status)
+
 
 app.use('/uploads', express.static('./uploads'));
 

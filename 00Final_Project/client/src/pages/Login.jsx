@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     return (
-        <>
+        <div className='container'> 
             <h2>Prašome užsiregistruoti</h2>
             {message &&
                 <div className="alert alert-danger">
@@ -54,7 +54,7 @@ const Login = () => {
                 </div>
                 <button className="btn btn-primary">PRISIJUNGTI</button>
             </form>
-        </>
+        </div>
     );
 }
 

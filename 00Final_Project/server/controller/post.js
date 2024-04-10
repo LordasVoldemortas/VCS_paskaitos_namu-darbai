@@ -1,11 +1,12 @@
 import { Router } from 'express'
 import { rm } from 'node:fs/promises';
 import Post from '../model/post.js'
-import upload from '../middleware/multer.js'
+import upload from '../middleware/multer.js';
+import auth from '../middleware/auth.js';
 
 const router = Router()
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     try {
         res.json(await Post
                     .find()
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
     try {
         res.json(
             await Post.findById(req.params.id));
@@ -29,22 +30,29 @@ router.get('/:id', async (req, res) => {
 })
 
 
-router.post('/', upload.single('photo'), async (req, res) => {
+
+router.post('/', auth, upload.single('photo'), async (req, res) => {
     console.log(req.body);
     if (req.file)
         req.body.photo = req.file.filename;
 
     try {
+        // Patikrinimas, ar egzistuoja projektas su tokiu pačiu svarstymo diena
+        // const existingProject = await Post.findOne({ resolution_date: req.body.resolution_date });
+        // if (existingProject) {
+        //     return res.status(400).json('Negalima pridėti naujo projekto, nes jau yra projektas su tokiu pačiu svarstymo diena.');
+        // }
+
+        // Sukuriamas naujas projektas, jei nėra jokių konfliktų
         await Post.create(req.body)
-        res.json('irasas sekmingai issaugotas')
+        res.json('Įrašas sėkmingai išsaugotas');
     } catch(e) {
-        console.log(e);
-        res.status(500).json('ivyko klaida')
+        console.error(e);
+        res.status(500).json('Įvyko klaida');
     }
 })
 
-
-router.put('/:id', upload.single('photo'), async (req, res) => {
+router.put('/:id', auth, upload.single('photo'), async (req, res) => {
 
     if (req.file) {
         const newPost = await Post.findById(req.params.id)

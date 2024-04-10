@@ -2,58 +2,53 @@ import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainContext from '../context/Main.jsx';
 import axios from 'axios';
-import User from '../pages/User.jsx';
+import User from './User.jsx';
 import { Link } from 'react-router-dom';
 
 const Chairman = () => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const { showNewPost, setUser } = useContext(MainContext); 
-    const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(false);
+  const { user, setUser } = useContext(MainContext);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        if(loading) return;
+  useEffect(() => {
+    // if (loading) return;
 
-        axios.get('http://localhost:3000/users/')
-        .then(resp => setData(resp.data))
-        .catch(err => {
-            if(err.response.status === 401) {
-                setUser(false);
-                navigate('/chairman');
-            }
-        });
-    }, [showNewPost, loading]);
+    axios.get('http://localhost:3000/users/')
+      .then(resp => {
+        setData(resp.data);
+        // setLoading(false);
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          setUser(false);
+          navigate('/users');
+        }
+        // setLoading(false); // Svarbu nustatyti loading į false, jei gaunama klaida
+      });
+  }, []);
 
-    return (
-        <>
+  // const firstUserId = data.length > 0 ? data[0]._id : ''; 
+  // const editUserLink = `/chairman/edit-user/${firstUserId}`;
 
-            <div className="d-flex justify-content-between align-items-center">
-            <Link to="/users/register/" className="btn btn-success">Naujas Vartotojas</Link>
+  return user?.chairman ? (
+    <>
+      <div >
+        <User />
+        {/* <Link to="/users/register/" className="btn btn-success">Naujas Vartotojas</Link> */}
+        {/* <Link to={editUserLink} className="btn btn-warning">Redaguoti</Link> */}
+        {/* <div>
+          {data.map((user) => (
+            <div key={user.id}>
+              <Link to={`/chairman/edit-user/${user._id}`} className="btn btn-warning">
+                Redaguoti
+              </Link>
             </div>
-            <table className="table">
-                <thead>
-                    <tr>
-
-                        <th>Vardas</th>
-                        <th>Pavarde</th>
-                        <th>Partijos pavadinimas</th>
-                        <th>El. Pasto adresas</th>
-                        <th>Slaptazodis</th>
-                        <th>Registracijos data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map(user => 
-                        <User 
-                            data={user} 
-                            // setLoading={setLoading} 
-                            key={user._id} 
-                        />
-                    )}
-                </tbody>
-            </table>
-            </>
-    );
+          ))}
+        </div> */}
+      </div>
+    </>
+  ) : 'Negalima prieiti';
 }
 
 export default Chairman;

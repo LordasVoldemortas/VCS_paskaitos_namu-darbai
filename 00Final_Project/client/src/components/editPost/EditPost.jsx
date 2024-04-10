@@ -2,10 +2,12 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import MainContext from '../../context/Main'
 
 const EditPost = () => {
   const [form, setForm] = useState({});
   const [message, setMessage] = useState()
+  const { setUser, user } = useContext(MainContext);
 
   const navigate = useNavigate();
 
@@ -32,9 +34,9 @@ const EditPost = () => {
   
   };
 
-  return (
-    <>
-      <h1>redagavimas</h1>
+  return user? (
+    <div className='container'> 
+      <h1>Įrašo redagavimas</h1>
       {message && <div className="alert alert-danger">{message}</div>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -65,7 +67,7 @@ const EditPost = () => {
             // defaultValue={message.description}
           />
         </div>
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <label>Talpinimo data</label>
           <input
             type="date"
@@ -74,7 +76,7 @@ const EditPost = () => {
             // defaultValue={new Date(form.hearing_at).toLocaleDateString('lt-LT')}
             // defaultValue={message.resolution_date}
           />
-        </div>
+        </div> */}
         <div className="mb-3">
           <label>Svarstymo data</label>
           <input
@@ -86,8 +88,8 @@ const EditPost = () => {
         <button className="btn btn-primary">Pridėti</button>
       </form>
       
-    </>
-  );
+    </div>
+  ) : 'Negalima prieiti';
 };
 
 export default EditPost;
